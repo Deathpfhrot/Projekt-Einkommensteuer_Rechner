@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eikommensteuer-Berechnung</title>
+    <link rel="stylesheet" href="assets/SASS/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="contain">
+        <form class="form1" action="" onsubmit="return false">
+            <div class="einkom">
+                <h2>Zu versteuerndes Einkommen Rechner:</h2>
+            </div>
+            <div>
+                <label for="year">Jahr:</label>
+                <select id="year">
+                    <option value="0">2019</option>
+                    <option value="1">2020</option>
+                    <option value="2">2021</option>
+                    <option value="3">2022</option>
+                </select>
+            </div>
+            <div>
+                <label for="artOfInvest">Art der Veranlagung:</label>
+                <input type="radio" name="investMethod" id="singleInvest" onclick="radioCheck1()">
+                <label for="singleInvest">Einzelveranlagung (Grundtarif)</label>
+                <input type="radio" name="investMethod" id="multiInvest" onclick="radioCheck2()">
+                <label for="multiInvest">Zusammenveranlagung (Splittingtarif)</label>
+            </div>
+
+            <div id="einkomContain">
+
+            </div>
+
+            <div class="submitDiv">
+                <input type="submit" value="Berechnen" onclick="zvEcalculator()">
+            </div>
+            <div class="einkom">
+                <h2>Ergebnis</h2>
+            </div>
+            <div>
+                <label for="">zu versteuerndes Einkommen:</label>
+                <spann id="zvEsum">Value€</spann>
+            </div>
+        </form>
+
+
+        <!-- 
+        <form action="" onsubmit="return false">
+            <div class="einkom">
+                <h2>Einkommensteurrechner</h2>
+            </div>
+            <div>
+                <label for="year">Jahr:</label>
+                <select id="year">
+                    <option value="">2019</option>
+                    <option value="">2020</option>
+                    <option value="">2021</option>
+                    <option value="">2022</option>
+                </select>
+            </div>
+            <div>
+                <label for="zvE">zu versteuerndes Einkommen:</label>
+                <input type="number" name="" id="zvE" step="00.01"><span>Euro</span>
+            </div>
+            <div>
+                <label for="artOfInvest">Art der Veranlagung:</label>
+                <input type="radio" name="investMethod" id="singleInvest">
+                <label for="singleInvest">Einzelveranlagung</label>
+                <input type="radio" name="investMethod" id="multiInvest">
+                <label for="multiInvest">Zusammenveranlagung</label>
+            </div>
+            <div>
+                <label for="entgeldErsatz">Entgeltersatzleistungen:</label>
+                <input type="checkbox" name="" id="entgeldErsatz" onclick="entgeldCheck()"><span
+                    id="entgeldSpan">keine</span>
+            </div>
+            <div>
+                <label for="kirchensteuer">Kirchensteuer:</label>
+                <select name="" id="kirchensteuer">
+                    <option value="">keine</option>
+                    <option value="">8% (Bayern, BaWü)</option>
+                    <option value="">9% (übrige)</option>
+                </select>
+            </div>
+            <div class="submitDiv">
+                <input type="submit" value="Berechnen">
+            </div>
+
+            <div class="einkom">
+                <h2>Ergebnis</h2>
+            </div>
+            <div>
+                <label for="">Einkommensteuer:</label>
+                <spann>Value€</spann>
+            </div>
+            <div>
+                <label for="">Solidaritätszuschlag:</label>
+                <spann>Value€</spann>
+            </div>
+            <div>
+                <label for="">Kirchensteuer:</label>
+                <spann>Value€</spann>
+            </div>
+            <div>
+                <label for=""><b>Gesamtbelastung::</b></label>
+                <spann><b>Value€</b></spann>
+            </div>
+        </form> -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/6585d50100.js" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>
